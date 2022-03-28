@@ -56,14 +56,24 @@ class Course:
             self.__users[user.id]['grade'] = 0
             user.add_course_in_user(self)
 
+    def add_grade(self, user, grade):  # изменить оценку
+        if user.id in self.__users:
+            self.__users[user.id]['grade'] = grade
 
-matesha = Course("Matan")
-print(matesha)
-rus_yaz = Course("Русския язык для начальной школы")
-print(rus_yaz)
+    def grade(self, user):  # вернуть оценку
+        a = None
+        if user.id in self.__users:
+            a = self.__users[user.id]['grade']
+        return a
+
+
+
+
 usr_1 = User('Michail', 'Timofeev')
+crs_1 = Course('Machine Learning')
 print(usr_1)
-matesha.add_user_on_courses(usr_1)
-print(matesha)
-usr_1.add_course_in_user(rus_yaz)
+print(crs_1)
+usr_1.add_course_in_user(crs_1)
 print(usr_1)
+crs_1.add_user_on_courses(usr_1)
+print(crs_1)

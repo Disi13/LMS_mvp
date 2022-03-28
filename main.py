@@ -1,11 +1,11 @@
-import lms_mvp
+import lms_mvp as lms
 
 
-matesha = Course("Matan")
+matesha = lms.Course("Matan")
 print(matesha)
-rus_yaz = Course("Русския язык для начальной школы")
+rus_yaz = lms.Course("Русския язык для начальной школы")
 print(rus_yaz)
-usr_1 = User('Michail', 'Timofeev')
+usr_1 = lms.User('Michail', 'Timofeev')
 print(usr_1)
 matesha.add_user_on_courses(usr_1)
 print(matesha)
